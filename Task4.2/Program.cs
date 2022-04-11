@@ -9,54 +9,38 @@ namespace Task4._2
             //1-1000 qeder ederlerin icerisinden ele ededleri cap etki :
             //hem polindrom olsun,
             //hem ededin reqemleri daxilinde 3 olmasin
-            //hem ededin reqemleri cemi 10 dan boyuk olsun
+            //hem ededin reqemleri cemi 10 dan boyuk olsun                       
+             
 
-            int num =232;           
-            int num1 = num;           
-            int num2 = num;           
-            int rev =0;
-            int rem = 0;           
+            for (int i = 1; i < 1000; i++)
+            {
+                int rev = 0;
+                int sum = 0;
+                int num1 = i;
+
+                while (num1 > 0)
+                {
+                    sum = sum + num1 % 10;
+
+                    rev = rev * 10 + num1 % 10;
+
+                    num1 /= 10;              
+
+                }
+
+                if (rev== i && i%10!=3 && (i/10) % 10 != 3 && sum>10)
+                {
+                    Console.WriteLine($"Numbers={i}");
+
+                }
+
+
+
+            }
+               
+                   
+                   
             
-            bool polState=false;
-            bool divide3=false;
-            bool sum10=false;
-
-            while (num>0)
-            {
-                rem = rem + num % 10;
-
-                if (rem<10)
-                {
-                    sum10 = true;
-                }
-
-                num /= 10;               
-
-            }
-
-            while (num1 > 0)
-            {
-                rev = (rev*10)+ (num1 % 10);
-                num1 /= 10;
-            }
-
-            if (rem== rev)
-            {
-                polState = true;
-            }
-
-            while (num2>0)
-            {
-                int qaliq = num2 % 10;
-
-                if (qaliq==3)
-                {
-                    divide3 = true;
-                    break;
-                }
-                num2/=10;
-
-            }
 
 
 
