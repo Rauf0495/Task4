@@ -35,7 +35,6 @@ namespace Task4._2
                 }
 
 
-
             }
                
                    
